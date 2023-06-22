@@ -1,0 +1,175 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  cursor:context-menu;
+  font-family: sans-serif;
+}
+
+#root {
+  width: 80%;
+  margin: 20px auto;
+  background-color: #eaf0f2;
+  padding: 10px 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+.title {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  letter-spacing: 2px;
+  background-color: #004080;
+  padding: 5px 0;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+/*-------------------------------------------items ---------------------------------*/
+.cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 10px;
+  padding: 15px 10px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.img {
+  height: 70px;
+  width: 70px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.num {
+  /* background-color: #DF2E38; */
+  color: #1b1a1acc;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px 9px;
+  border-radius: 5px;
+}
+
+.quant {
+  background-color: #0075ff;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 50%;
+  font-weight: bold;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3), 5px 5px 5px rgba(0, 0, 0, 0.2),
+    10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+.quant:hover{
+  border-radius: 40%;
+}
+
+.subTotal {
+  background-color: #df2e38;
+  font-size: 17px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3), 5px 5px 5px rgba(0, 0, 0, 0.2),
+    10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+/*----------------------icons (delete and like)--------------------*/
+.cart i {
+  cursor: pointer;
+  font-size: 20px;
+  color: #0075ff;
+  transition: 0.5s;
+}
+.fa-heart:hover{
+  transform: rotateZ(-345deg);
+}
+/*--------------------- delete button -----------------------------------*/
+.del {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.del i{
+  color: #837e7e;
+  opacity: 0.6;
+  transition: 0.15s;
+}
+.del i:hover{
+  color: red;
+  transform: scale(1.1);
+}
+
+/*--------------------------this id (#liked) will be added by js ------------------*/
+
+#liked {
+  color: red;
+  position: relative;
+  text-align: center;
+  line-height: 15px;
+  transform: rotateZ(15deg);
+}
+#liked::after {
+  content: "1";
+  font-size: 7px;
+  color: #fff;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #f50944;
+  bottom: 10px;
+  left: 14px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3), 5px 5px 5px rgba(0, 0, 0, 0.2),
+    10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+.cartliked .num{
+  /* border:2px dashed rgba(245, 10, 53, 0.308); */
+  color: #f33554;
+}
+
+/*---------------------------------------- total ----------------------------------*/
+.total {
+  margin: auto;
+  display: flex;
+  justify-content: end;
+}
+/*---------total----------*/
+.total h4 {
+  background-color: #004080;
+  padding: 10px 15px;
+  text-align: center;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3), 5px 5px 5px rgba(0, 0, 0, 0.2),
+    10px 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+/*---------like-----------*/
+.total h3{
+    background-color: #f33554;
+    margin:0 30px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3), 5px 5px 5px rgba(0, 0, 0, 0.2),
+    10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.empty {
+  color: #575555;
+  text-align: center;
+  width: 200px;
+  margin: auto;
+  opacity: 0.6;
+}
+.buy{
+  border: none;
+  background-color: #004080;
+  border-radius: 10%;
+  padding: 0 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
